@@ -1,0 +1,180 @@
+
+
+
+
+&__historia{
+
+    .item2{
+        @apply pb-2 ;
+    }
+
+    &__bg{
+
+        @apply bg-[#15FEF8] bg-[url("../../src/fonts/fundo.png")] ;
+    }
+
+    &__alinhar{
+
+        @apply h-auto ;
+
+        &-conteudo{
+            @apply py-10 pt-10 ;
+        }
+
+        &-grid{
+            @apply grid grid-cols-1 gap-6 xl:grid-cols-2 lg:mx-6 py-20 ;
+        }
+
+        &-entre{
+            @apply flex items-center justify-between  ;
+        }
+
+        &-centro{
+            @apply flex  justify-center items-start mx-auto ;
+        }
+
+        &-inicio{
+            @apply flex  justify-start items-start max-w-4xl mx-auto;
+        }
+
+        &-subtitulo{
+            @apply grid justify-items-center xl:justify-items-start ;
+        }
+
+   
+    }
+
+    &__fonte{
+
+        &-titulo{
+            @apply text-5xl text-center font-bold pt-2 px-4 ;
+        }
+
+        &-titulo-timeline{
+            @apply text-5xl  font-bold  text-yellow-500 mb-6 ;
+        }
+
+        &-subtitulo{
+            @apply text-5xl  font-bold  px-3 ;
+        }
+
+        &-topicos{
+            @apply text-2xl  font-bold  px-3 sm:text-3xl;
+        }
+
+        &-topicos2{
+            @apply  w-full font-bold text-center  rounded-full p-4  text-slate-900 text-4xl bg-[#FFC700] lg:w-3/5 ;
+        }
+
+        &-conteudo{
+            @apply text-yellow-500 ;
+        }
+    }
+
+    &__box{
+
+        &-space{
+            @apply space-y-6 ;
+        }
+
+        &-tamanho{
+            @apply max-w-2xl mx-auto ;
+        }
+
+        &-borda{
+            @apply bg-black max-w-fit ;
+        }
+
+        &-borda1{
+            @apply relative -left-2 -top-2 bg-white ;
+        }
+
+        &-borda2{
+            @apply relative top-[5px] left-[5px] bg-[15FEF8] border-2 border-black ;
+        }
+
+    }
+
+    &__conteudo {
+        @apply w-full py-6  mt-6 xl:w-3/5  ;
+
+        .tabs2 {
+            @apply hidden;
+
+            &--ativo {
+                @apply block;
+            }
+
+            &__ano {
+                @apply text-5xl font-bold p-10; 
+            }
+        }
+        @include nav-tabs();
+        @include tab-content();
+
+
+    }
+
+    &__regioes {
+        
+        @apply flex flex-row justify-center mt-6 ;
+        @apply bg-white rounded-3xl ;
+        @apply h-fit;
+       
+
+        &--caixa {
+
+            @apply   w-full ;
+            @apply  overflow-y-hidden whitespace-nowrap  max-h-[570px];
+        }
+
+        &--caixa2 {
+            @apply box-border h-[362px] w-full p-4 border-2 bg-[#D99CD533] rounded-3xl   grid grid-rows-3 ;   
+        }
+    
+    }
+
+    &__posicao{
+
+        &-informacao{
+            @apply  my-auto  p-2 bg-[#163570] rounded-r-3xl rounded-bl-3xl sm:p-10 sm:py-20 ;
+           
+        }
+
+        &-container{
+            @apply p-32 ml-16 ;
+        }
+
+        &-container-infos {
+            @apply p-24 ;
+        }
+
+    }
+
+    &__tabela{
+
+        @apply  rounded-xl overflow-auto;
+
+        &-titulo{
+            @apply bg-slate-600  overflow-hidden my-8;
+            &-fonte{
+                @apply border-b  font-medium py-3 text-white  text-center ;
+            }
+        }
+
+        &-estilo{
+            @apply border-collapse table-auto w-full text-sm ;
+        }
+
+        &-corpo{
+            @apply bg-white dark:bg-slate-800;
+            &-fonte{
+                @apply border-b border-slate-100 p-3  text-slate-500 text-center ;
+            }
+        }
+
+    }
+
+
+
+}

@@ -1,2 +1,9 @@
-# Justi-a-eleitoral
-Uma página pra justiça eleitoral
+# conheca-je
+uma página para justiça eleitoral (TSE)
+
+# comandos
+
+```bash
+npm install vite@latest 
+npm run dev
+```

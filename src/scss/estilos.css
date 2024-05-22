@@ -1,0 +1,225 @@
+/* Estilos do Modal */
+#calendar-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Duas colunas iguais ll */
+}
+
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--color-day);
+  margin: 5px;
+  box-shadow: 0px 0px 3px var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15%;
+  width: 100%;
+  height: 100%;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: var(--body-color) !important;
+  box-shadow: none !important;
+}
+
+#newEventModal,
+#deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: var(--modal-event);
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  position: absolute;
+  font-family: sans-serif;
+}
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+
+#eventText {
+  font-size: 10px;
+}
+
+.event {
+  background-color: #00FF5A;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.event:hover {
+  background-color: rgb(34 197 94);
+}
+
+#myModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modalContent {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+
+.acertou {
+  color: #0CAB44;
+}
+
+.errou {
+  color: #FF7A00;
+}
+
+@media screen and (min-width: 1200px) {
+  #modalContent {
+    width: 40%;
+  }
+}
+
+#closeModal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#closeModal:hover,
+#closeModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#star1-bg {
+  background-image: url("../fonts/estrela1.svg");
+  background-repeat: no-repeat;
+  background-position: 110% -10%;
+}
+
+@media screen and (max-width: 1200px) {
+  #bg-amarelo{
+    background-color:  #fac60e ;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #calendario-bg {
+    display: block;
+    background-image: url("../fonts/circulo-verde.svg"), url("../fonts/circulo-azul.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -10% 10%, 100% 100%;
+  }
+
+  #duvidas {
+    display: block;
+    background-image: url("../fonts/exclamacao-esquerda-inferior.svg"), url("../fonts/exclamacao-esquerda-topo.png"), url("../fonts/exclamacao-direita-inferior.png"), url("../fonts/exclamacao-direita-topo.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 10% 90%, 15% 10%, 80% 100%, 100% 0%;
+
+  }
+
+  #playlist {
+    display: block;
+    background-image: url("../fonts/play-superior.png"), url("../fonts/play-inferior.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 0%, 0% 100%;
+  }
+
+  #historia-bg {
+    display: block;
+    background-image: url("../fonts/fundo.png"), url("../fonts/livro-historia.png"), url("../fonts/curiosidade-historia.png");
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-position: center, 85% 0%, 100% 100%;
+  }
+
+  #anos92-bg {
+   
+    background-image: url('../fonts/estrela-azul.png'), url("../fonts/estrela-azul.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  #bg-amarelo {
+    background-image: url('../fonts/bg-amarelo.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 90% ;
+  }
+
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+
+.post-container {
+  height: 180px; 
+  overflow-y: auto; 
+
+}
+
+/* Estilizando a barra de rolagem */
+.post-container::-webkit-scrollbar {
+  width: 6px; /* largura da barra de rolagem */
+}
+
+/* Estilizando o rastreador (a "bolinha" que você arrasta) */
+.post-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* cor do rastreador */
+  border-radius: 5px; /* borda arredondada do rastreador */
+ 
+}
+
+/* Removendo os botões de seta de rolagem */
+.post-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Estilizando a área da barra de rolagem (fora do rastreador) */
+.post-container::-webkit-scrollbar-track {
+  background-color: #010101 ; /* cor de fundo da área da barra de rolagem */
+  border-radius: 5px; /* borda arredondada */
+  width: 50%;
+}

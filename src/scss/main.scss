@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./mixins.scss";
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Unbounded";
+    src: url("../fonts/Unbounded-ExtraBold.ttf") format("truetype");
+}
+
+
+.conheca-je {
+
+
+    // *{
+    //     border: 1px solid hotpink;
+    // }
+
+    * {
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    .conheca-je__header__fonte-titulo2 {
+        font-family: "Unbounded", "Space Grotesk", sans-serif;
+    }
+
+
+
+
+
+    .link {
+        @apply flex justify-center items-center bg-[#B8FE43] text-[#163570]  py-2 px-2  hover:font-bold text-lg sm:text-2xl;
+
+        &--ativo {
+            @apply font-bold  text-[#163570] bg-no-repeat bg-right bg-[url(../../src/fonts/seta-azul.svg)] text-lg sm:text-2xl;
+        }
+    }
+
+    .link2 {
+        @apply flex justify-center items-end bg-white text-[#163570] text-3xl  hover:font-bold;
+
+        &--ativo {
+            @apply font-bold text-3xl text-[#163570];
+            @apply bg-no-repeat bg-right sm:bg-[url(../../src/fonts/seta-azul.svg)];
+        }
+    }
+
+    &.resposta {
+        @apply text-center text-3xl;
+    }
+
+
+    &.p {
+        @apply mb-4;
+    }
+
+    &.linkinterno2 {
+        @apply text-blue-800 text-lg  hover:font-semibold hover:underline;
+
+        &--ativo {
+            @apply font-bold  text-[#163570];
+        }
+    }
+
+    .lista {
+        @apply divide-y flex flex-row md:flex-col gap-4 md:gap-0;
+    }
+
+    .objeto {
+        @apply py-4;
+    }
+
+    .teste {
+        @apply flex justify-items-stretch items-center space-x-4;
+    }
+
+    &__container {
+        @apply container mx-auto px-4 py-4 my-auto;
+
+        &__sub {
+            @apply flex space-x-4;
+        }
+    }
+
+    &__imagem {
+        @apply flex;
+    }
+
+    &__grid {
+        @apply grid grid-cols-2;
+    }
+
+    @import "./header.scss";
+    @import "./glossario.scss";
+    @import "./quiz.scss";
+    @import "./perguntas.scss";
+    @import "./playlists.scss";
+    @import "./historia.scss";
+    @import "./90anos.scss";
+    @import "./calendario.scss";
+    @import "./92anos.scss";
+
+    @layer components {
+        .accordion-header:hover .conheca-je__perguntas__fonte-subtitulo {
+            color: black;
+        }
+    
+        .accordion-header.active .conheca-je__perguntas__fonte-subtitulo {
+            color: black;
+        }
+    
+        .accordion-header {
+            @apply py-4 px-6 cursor-pointer;
+        }
+    
+        .accordion-header.active i {
+            @apply transition ease-in-out duration-300;
+            transform: rotateX(180deg);
+        }
+    
+        .accordion-body {
+            @apply max-h-0 overflow-hidden transition-all duration-200 ease-out;
+        }
+    
+        .accordion-header.active + .accordion-body {
+            max-height: fit-content;
+        }
+    }
+    
+}
+

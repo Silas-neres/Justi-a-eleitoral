@@ -1,0 +1,146 @@
+&__90anos{
+
+    &.section {
+        
+       
+       
+
+        &.videos {
+            position: center;
+            z-index: 4;
+            margin-bottom: 50px;
+
+            .titulo {
+                color: #176715;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .owl-carousel {
+                .item {
+
+                    @media (max-width: 575.98px) {
+                        width: fit-content;
+                    }
+
+                    .card {
+                        background-color: #012530;
+                        border-color: transparent;
+                        border-radius: 10px;
+                        color: #fff;
+                        overflow: hidden;
+                        min-height: 480px;
+
+                        .imagem-video {
+                            
+                            a {
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 50px;
+                                    height: 50px;
+                                    background-image: url(../fonts/play.png);
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                }
+                            }
+                        }
+
+                        .card-body {
+                            .card-title {
+                                font-size: 20px;
+                                font-weight: bold;
+                                padding: 1.2rem;
+                            }
+                            .card-text {
+                                padding: 1.2rem;
+                            }
+                        }
+                    }
+                }
+
+                .owl-nav {
+                   
+                    position: relative;
+
+                    .owl-prev, .owl-next {
+                        @apply lg:absolute ;
+                        top: -260px;
+
+                        img {
+                            max-width: 30px;
+                        }
+
+                        &:hover {
+                            background-color: transparent;
+                            opacity: .7;
+                        }
+
+                        &:focus {
+                            outline: none
+                        }
+                    }
+
+                    .owl-prev {
+                        left: -40px;
+                    }
+
+                    .owl-next {
+                        right: -40px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+
+
+    &__hidden{
+        @apply block;
+    }
+
+    &__tamanho{
+
+        &-titulo{
+            @apply max-w-lg mx-auto lg:max-w-2xl ;
+        }
+    }
+
+    &__fonte{
+
+        &-titulo{
+            @apply text-5xl text-center font-bold mr-5 ml-10 ;
+        }
+    }
+
+    &__estilo{
+
+        &-titulo{
+            @apply bg-yellow-500;
+            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0 99%, 0 50%);
+        }
+    }
+
+    &__grid{
+        @apply grid grid-cols-1 lg:grid-cols-5 gap-14 ;
+        @apply 2xl:mx-20;
+    }
+
+    &__imagem{
+
+        &-90anos{
+            @apply flex justify-center ;
+        }
+    }
+}
+
